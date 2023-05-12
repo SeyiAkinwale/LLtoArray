@@ -1,5 +1,6 @@
 #include <vector>
 #include <string>
+#include <iostream>
 
 class Node {
   public:
@@ -37,6 +38,6 @@ int main ()
   b.next=&c;
   c.next=&d;
   Node e("E");
-  std::vector<std::string>output=linkedListValues(&e);
-  //for()
+  std::vector<std::string>output=linkedListValues(&a);
+for(std::string elem:output)std::cout<<elem<<" ";
 }
