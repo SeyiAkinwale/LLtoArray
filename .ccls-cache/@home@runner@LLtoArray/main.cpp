@@ -27,13 +27,16 @@ std::vector<std::string> linkedListValues(Node* head)
   return temp;
 }
 
-int main ():
+int main ()
 {
   Node a("A");
   Node b("B");
   Node c("C");
   Node d("D");
-  a->next=&b;
-  b->next=&c;
-  c->next=&d;
+  a.next=&b;
+  b.next=&c;
+  c.next=&d;
+  Node e("E");
+  std::vector<std::string>output=linkedListValues(&e);
+  //for()
 }
