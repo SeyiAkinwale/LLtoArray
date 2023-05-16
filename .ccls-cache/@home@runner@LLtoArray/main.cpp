@@ -20,12 +20,10 @@ std::vector<std::string> linkedListValues(Node* head)
   std::vector<std::string> temp;
   
   Node* current = head;
-  while (current!=nullptr)
-  {
-    temp.push_back(current->val);
-    current=current->next;
-  }
-  return temp;
+  if(head ==nullptr) return temp;
+
+  temp.push_back(current->val);
+  linkedList(head->next);
 }
 
 int main ()
