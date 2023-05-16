@@ -15,15 +15,25 @@ class Node {
 
 
 //recursive
-std::vector<std::string> linkedListValues(Node* head) 
+void linkedListValues(Node* head, std::vector<std::string> &values) 
 {
-  std::vector<std::string> temp;
-  
-  Node* current = head;
-  if(current ==nullptr) return temp;
+  if(head == nullptr){
+    return;
+  }
+  values.push_back(head->val);
+  linkedListValues(head->next, values);
+}
 
-  temp.push_back(current->val);
-  linkedListValues(current->next);
+std::vector<std::string> linkedListValues(Node* head)
+{
+  std::vector<std::string> values;
+  linkedListValues(head, values);
+  return values;
+}
+
+
+void run() {
+
 }
 
 int main ()
