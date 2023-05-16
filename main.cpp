@@ -14,7 +14,7 @@ class Node {
 };
 
 
-//iterative
+//recursive
 std::vector<std::string> linkedListValues(Node* head) 
 {
   std::vector<std::string> temp;
